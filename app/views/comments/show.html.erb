@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>КОМЕНТАР</h1>
+
+<p>
+  <strong>ТЕКСТ:</strong>
+  <%= @comment.body %>
+</p>
+
+<p>
+  <strong>АВТОР:</strong>
+  <%= @comment.author %>
+</p>
+
+<h1>ДО ПОСТА</h1>
+
+<p>
+  <strong>ЗАГОЛОВОК:</strong>
+  <%= @comment.post.title %>
+</p>
+
+<p>
+  <strong>ТЕКСТ:</strong>
+  <%= @comment.post.body %>
+</p>
+
+<p>
+  <strong>АВТОР:</strong>
+  <%= @comment.post.author %>
+</p>
+
+
+<%= link_to 'РЕДАГУВАТИ', edit_comment_path(@comment) %> |
+<%= link_to 'НАЗАД', comments_path %>

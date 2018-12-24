@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>ПОСТ</h1>
+
+<p>
+  <strong>ЗАГОЛОВОК:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>ТЕКСТ:</strong>
+  <%= @post.body %>
+</p>
+
+<p>
+  <strong>АВТОР:</strong>
+  <%= @post.author %>
+</p>
+
+<%= link_to 'РЕДАГУВАТИ', edit_post_path(@post) %> |
+<%= link_to 'НАЗАД', posts_path %>

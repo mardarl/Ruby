@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>КОМЕНТАРІ</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ТЕКСТ</th>
+      <th>АВТОР</th>
+      <th>ЗАГОЛОВОК ПОСТА</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.body %></td>
+        <td><%= comment.author %></td>
+        <td><%= comment.post.title %></td>
+        <td><%= link_to 'ПЕРЕГЛЯНУТИ', comment %></td>
+        <td><%= link_to 'РЕДАГУВАТИ', edit_comment_path(comment) %></td>
+        <td><%= link_to 'ВИДАЛИТИ', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'НОВИЙ КОМЕНТАР', new_comment_path %>
