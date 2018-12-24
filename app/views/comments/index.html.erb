@@ -20,7 +20,7 @@
         <td><%= comment.post.title %></td>
         <td><%= link_to 'ПЕРЕГЛЯНУТИ', comment %></td>
         <td><%= link_to 'РЕДАГУВАТИ', edit_comment_path(comment) %></td>
-        <td><%= link_to 'ВИДАЛИТИ', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'ВИДАЛИТИ', comment, method: :delete, data: { confirm: 'ВИ ВПЕВНЕНІ?' } %></td>
       </tr>
     <% end %>
   </tbody>
