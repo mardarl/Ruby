@@ -26,6 +26,16 @@
     <%= form.text_field :author %>
   </div>
 
+  <h2>КОМЕНТАРІ</h2>
+
+  <%= form.fields_for :comment do |comment| %>
+  <div class="field">
+    <%= comment.text_field :author %>
+    <%= comment.text_field :body %>
+  </div>
+
+  <% end %>
+
   <div class="actions">
     <input type="submit" name="commit" value="ОНОВИТИ" data-disable-with="Update Comment">
   </div>
